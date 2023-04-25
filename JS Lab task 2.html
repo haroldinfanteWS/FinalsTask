@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Lab task 2</title>
+</head>
+<body>
+
+    <script>
+        function multi(){
+
+num1=document.getElementById("num1").value;
+num2=document.getElementById("num2").value;
+multi=(parseInt(num1)*parseInt(num2));
+
+document.getElementById("result").innerHTML=multi;
+}
+function divi(){
+
+num1=document.getElementById("num1").value;
+num2=document.getElementById("num2").value;
+divi=(parseInt(num1)/parseInt(num2));
+
+document.getElementById("result").innerHTML=divi;
+}
+
+
+    </script>
+
+    <div> 
+      <p>1st Number  <input type="number" id="num1"></p><br>
+      <p> 2nd Number <input type="number" id="num2"></p>
+        <br><br>
+        <button id="multi" onclick="multi()">Multiply</button><button id="divi" onclick="divi()">Divide</button>
+
+        <p>The Result</p>
+        <p id="result"></p>
+
+
+    </div>
+
+    
+</body>
+</html>
