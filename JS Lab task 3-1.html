@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Lab task 3-1</title>
+</head>
+
+<script>
+    function Order()
+    {
+        item = document.getElementById("items").value;
+        product = "15.97";
+        itemcost = parseFloat(product)*parseFloat(item);
+        document.getElementById("itemcost").innerHTML = "$" + itemcost.toFixed(2);
+        ship = "4.99";
+        totalbefore = parseFloat(itemcost)+parseFloat(ship);
+        document.getElementById("totalbefore").innerHTML = "$" + totalbefore.toFixed(2);
+        tax = Math.round(parseFloat(totalbefore)*10)/100;
+        document.getElementById("tax").innerHTML = "$" + tax.toFixed(2);
+        total = parseFloat(totalbefore)+parseFloat(tax);
+        document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+
+
+    }
+</script>
+<body>
+    <p>Items: </p>
+    <input type="number" size="10" id="items">
+    <p style="block"></p>
+    <input type="button" value="Enter" onclick="Order()">
+
+    <div>
+        <h4>Order Summary</h4>
+        <p style=>Items(): </p>
+        <p id="itemcost">$0.00</p>
+        <p></p>
+        <p style="width:250px">Shipping and Handling: </p>
+        <p id="ship">$4.99</p>
+        <p></p>
+        <p style="width:250px;">Total before tax: </p>
+        <p id="totalbefore" >$0.00</p>
+        <p></p>
+        <p style="width:250px;">Estimated tax(10%): </p>
+        <p id="tax" >$0.00</p>
+        <p></p>
+        <hr>
+        <p style="width:250px;font-weight: bold;color: red;">Order Total: </p>
+        <p id="total" style="font-weight: bold;color: red;">$0.00</p>
+
+    </div>
+
+</body>
+</html>
